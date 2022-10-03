@@ -43,11 +43,14 @@ namespace Lab1_CODE_IT_INC
         #region Variables
         private List<String> Status = new List<String>();
         string FileName;
+        // Variables for messagebox to display information
         string displayProject;
         double displaybudget;
         double displaySpent;
         double displayHours;
         string displayStatus;
+
+        // Validation to make sure everything is true before you enter it to the list.
         bool validation1 = true;
         bool validation2 = true;
         bool validation3 = true;
@@ -255,8 +258,10 @@ namespace Lab1_CODE_IT_INC
                     string temp;
                     temp = lbxProjects.SelectedItem.ToString();
 
+                    // Finds the Poroject name to load information
                     Program SelectProject = Program.Find(temp);
 
+                    // Loads the Data from the list, to go to edit page
                     EditPage window = new EditPage();
                     window.project = SelectProject.ProjectName;
                     window.budget = SelectProject.TheBudget;

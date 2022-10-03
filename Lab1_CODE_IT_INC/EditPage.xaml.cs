@@ -41,11 +41,13 @@ namespace Lab1_CODE_IT_INC
         #endregion
 
         #region Validations and get/sets to cross pages
+        // Validations for altering information
         bool validation2 = true;
         bool validation3 = true;
         bool validation4 = true;
         bool validation5 = true;
 
+        // Gets and sets for information from Main page
         public string project { get; set; }
         public double budget { get; set; }
         public double spent { get; set; }
@@ -58,11 +60,12 @@ namespace Lab1_CODE_IT_INC
         {
             string combo;
 
+            //Fills in the textboxes with the variables grabbed from the Main window
             this.txtEditProject.Text = project;
             this.txtEditBudget.Text = budget.ToString();
             this.txtEditSpent.Text = spent.ToString();
             this.txtEditHours.Text = hours.ToString();
-            // combo box needs seperate variable to show information
+            // combo box needs seperate variable to show information because it was crashing otherwise
             combo = status;
             this.cboEditStatus.Text = combo;
         }
