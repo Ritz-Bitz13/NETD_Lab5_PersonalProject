@@ -52,7 +52,14 @@ namespace Lab1_CODE_IT_INC
             projectStatus = string.Empty;
         }
 
-
+        /// <summary>
+        /// Constructor with all variable to input
+        /// </summary>
+        /// <param name="projectname">Write down the Product Name </param>
+        /// <param name="thebudget">Enter the Amount the budget is </param>
+        /// <param name="amountspent">Enter the amount you have spent</param>
+        /// <param name="hoursremaining">Enter how many hours you have remaining</param>
+        /// <param name="projectstatus">Enter the Project Status</param>
         public Program(string projectname, double thebudget, double amountspent, double hoursremaining, string projectstatus)
         {
             projectName = projectname;
@@ -94,6 +101,11 @@ namespace Lab1_CODE_IT_INC
         #endregion
 
         #region Find the Project to edit 
+        /// <summary>
+        /// This will find the Project and extract the information from it and display it when called
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <returns></returns>
         public static Program Find(string Name)
         {
             // Starts a new search
