@@ -1,13 +1,15 @@
-﻿/*
-    *Group Members: Martin Barber and Auriana Hayles
-    * Student ID's:	100368442			100832275
-    * Class: OOP 3200 - 07
-    * Date: Started Sept 20th, Finished Friday Sept 30th.
-    * File Name: Lab_2(Main.cpp)
-    * GitHub: https://github.com/Ritz-Bitz13/OOP__Week04/tree/main/Lab_2
+﻿#region Comment Header
+/*
+    * Group Members: Martin Barber
+    * Student ID's:	100368442
+    * Class: NETD 3202 - 04
+    * Date: Started Sept 28th, Finished October 1st.
+    * File Name: Lab_1(Main Window Code)
+    * GitHub: https://github.com/Ritz-Bitz13/NETD3202-Work/tree/master/Lab1_CODE_IT_INC
 */
+#endregion
 
-
+#region using statements
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +24,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+#endregion
 
+#region Namespace
 namespace Lab1_CODE_IT_INC
 {
     /// <summary>
@@ -34,7 +38,9 @@ namespace Lab1_CODE_IT_INC
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Variables
         private List<String> Status = new List<String>();
         string FileName;
         string displayProject;
@@ -47,8 +53,9 @@ namespace Lab1_CODE_IT_INC
         bool validation3 = true;
         bool validation4 = true;
         bool validation5 = true;
+        #endregion
 
-
+#region Create Project Button / Validation
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             Program proj = new Program();
@@ -168,7 +175,8 @@ namespace Lab1_CODE_IT_INC
             // If item is double clicked on the listbox, retreive information and display it.
             
         }
-        
+#endregion
+
         #region Custom Functions
 
         private void SetDefaults()
@@ -233,6 +241,7 @@ namespace Lab1_CODE_IT_INC
 
         #endregion
 
+        #region Edit Button
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
             if (lbxProjects.SelectedItem == null)
@@ -258,5 +267,6 @@ namespace Lab1_CODE_IT_INC
                 }
             }
         }
+#endregion
     }
 }

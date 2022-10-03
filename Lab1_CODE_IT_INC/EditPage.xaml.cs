@@ -1,4 +1,16 @@
-﻿using System;
+﻿#region Comment Header
+/*
+    * Group Members: Martin Barber
+    * Student ID's:	100368442
+    * Class: NETD 3202 - 04
+    * Date: Started Sept 28th, Finished October 1st.
+    * File Name: Lab_1(Edit Page)
+    * GitHub: https://github.com/Ritz-Bitz13/NETD3202-Work/tree/master/Lab1_CODE_IT_INC
+*/
+#endregion
+
+#region Using Statements
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +23,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+#endregion
 
+#region NameSpace
 namespace Lab1_CODE_IT_INC
 {
     /// <summary>
@@ -24,6 +38,9 @@ namespace Lab1_CODE_IT_INC
             InitializeComponent();
         }
 
+        #endregion
+
+        #region Validations and get/sets to cross pages
         bool validation2 = true;
         bool validation3 = true;
         bool validation4 = true;
@@ -34,7 +51,9 @@ namespace Lab1_CODE_IT_INC
         public double spent { get; set; }
         public double hours { get; set; }
         public string status { get; set; }
+        #endregion
 
+        #region When window open load information
         private void Window_Loading(object sender, EventArgs e)
         {
             string combo;
@@ -47,7 +66,9 @@ namespace Lab1_CODE_IT_INC
             combo = status;
             this.cboEditStatus.Text = combo;
         }
+        #endregion
 
+        #region Alter Button
         private void btnAlter_Click(object sender, RoutedEventArgs e)
         {
             string temp;
@@ -130,13 +151,17 @@ namespace Lab1_CODE_IT_INC
                 MessageBox.Show("Information Updated", "Updated Information");
             }
         }
+        #endregion
 
+        #region Exit Button
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             //Closes the page
             this.Close();
         }
+        #endregion
 
+        #region Validation CheckDouble
         public bool CheckDouble(string value)
         {
             // Variables for the validation
@@ -166,5 +191,6 @@ namespace Lab1_CODE_IT_INC
                 return isDouble;
             }
         }
+#endregion
     }
 }

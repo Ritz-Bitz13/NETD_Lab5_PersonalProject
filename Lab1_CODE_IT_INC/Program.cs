@@ -1,11 +1,25 @@
-﻿//These are default (keep them!)
+﻿#region Comment Header
+/*
+    * Group Members: Martin Barber
+    * Student ID's:	100368442
+    * Class: NETD 3202 - 04
+    * Date: Started Sept 28th, Finished October 1st.
+    * File Name: Lab_1(Class Page - Program)
+    * GitHub: https://github.com/Ritz-Bitz13/NETD3202-Work/tree/master/Lab1_CODE_IT_INC
+*/
+#endregion
+
+#region Using
+//These are default (keep them!)
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Windows;
 using System.Windows.Media.Media3D;
+#endregion
 
+#region Main Class
 //keep the default namespace too, BillingApp is just the name of my project.
 namespace Lab1_CODE_IT_INC
 {
@@ -77,7 +91,9 @@ namespace Lab1_CODE_IT_INC
             get { return this.projectStatus; }
             set { this.projectStatus = value; }
         }
+        #endregion
 
+        #region Find the Project to edit 
         public static Program Find(string Name)
         {
             // Starts a new search
@@ -92,5 +108,6 @@ namespace Lab1_CODE_IT_INC
             }
             return findproject;
         }
+        #endregion
     }
 }
