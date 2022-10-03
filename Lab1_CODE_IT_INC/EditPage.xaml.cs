@@ -56,6 +56,11 @@ namespace Lab1_CODE_IT_INC
         #endregion
 
         #region When window open load information
+        /// <summary>
+        /// When the window opens up This will set the information in the textbox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Window_Loading(object sender, EventArgs e)
         {
             string combo;
@@ -72,6 +77,11 @@ namespace Lab1_CODE_IT_INC
         #endregion
 
         #region Alter Button
+        /// <summary>
+        /// If all the information in the form is true, it will alter the information in the project
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAlter_Click(object sender, RoutedEventArgs e)
         {
             string temp;
@@ -157,6 +167,11 @@ namespace Lab1_CODE_IT_INC
         #endregion
 
         #region Exit Button
+        /// <summary>
+        /// This closes the edit page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
             //Closes the page
@@ -165,6 +180,12 @@ namespace Lab1_CODE_IT_INC
         #endregion
 
         #region Validation CheckDouble
+
+        /// <summary>
+        /// Same as Main page validation. Checks the input is a double number
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool CheckDouble(string value)
         {
             // Variables for the validation

@@ -59,6 +59,11 @@ namespace Lab1_CODE_IT_INC
         #endregion
 
 #region Create Project Button / Validation
+        /// <summary>
+        /// Once the user clicks the create button, as long as all the items in the textboxes are true, it will add it to the list.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
             Program proj = new Program();
@@ -146,7 +151,7 @@ namespace Lab1_CODE_IT_INC
                 proj.ProjectStatus = cboStatus.Text.Trim();
             }
 
-
+            // If all the validations pass without a false, then add the Project to the list
             if (validation1 && validation2 && validation3 && validation4 && validation5)
             {
                 Program.Projects.Add(proj);
@@ -161,7 +166,30 @@ namespace Lab1_CODE_IT_INC
             }
             
         }
+#endregion
 
+
+#region Custom Functions
+
+        /// <summary>
+        /// This will set the defaults for all the Textboxes
+        /// </summary>
+        private void SetDefaults()
+        {
+            // Clear all textboxes to be ready for the next project.
+            txtProjectName.Clear();
+            txtBudget.Clear();
+            txtSpent.Clear();
+            txtHoursRemaining.Clear();
+            cboStatus.Text = "";
+            txtProjectName.Focus();
+        }
+
+        /// <summary>
+        /// Once the user as selected and item from the list, you will be able to edit it
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void SelectedAnItem(object sender, EventArgs e)
         {
             if (lbxProjects.SelectedItem == null)
@@ -175,24 +203,14 @@ namespace Lab1_CODE_IT_INC
                 temp = lbxProjects.SelectedItem.ToString();
                 Populate(temp);
             }
-            // If item is double clicked on the listbox, retreive information and display it.
-            
-        }
-#endregion
+            // If item is double clicked on the listbox, retrieve information and display it.
 
-        #region Custom Functions
-
-        private void SetDefaults()
-        {
-            // Clear all textboxes to be ready for the next project.
-            txtProjectName.Clear();
-            txtBudget.Clear();
-            txtSpent.Clear();
-            txtHoursRemaining.Clear();
-            cboStatus.Text = "";
-            txtProjectName.Focus();
         }
 
+        /// <summary>
+        /// Populate the information for the textbox or edit button
+        /// </summary>
+        /// <param name="name"></param>
         private void Populate(string name)
         {
             // Looks to see if the project name exists.
@@ -206,11 +224,16 @@ namespace Lab1_CODE_IT_INC
             displayStatus = SelectProject.ProjectStatus;
 
             // This is the messagebox that is receiving the information to display in the message box.
-            MessageBox.Show(("Project Name: " + displayProject + "\nBudget: $" + displaybudget + "\nSpent: $" +
-                             displaySpent + "\nHours Remaining: " + displayHours + "\nStatus: " + displayStatus), "Project Information");
+            MessageBox.Show(("Project Name: " + displayProject + "\nBudget: $" + String.Format("{0:n}", displaybudget) + "\nSpent: $" +
+                             String.Format("{0:n}", displaySpent) + "\nHours Remaining: " + displayHours + "\nStatus: " + displayStatus), "Project Information");
 
         }
 
+        /// <summary>
+        /// This function checks if the number entered is a double
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public bool CheckDouble(string value)
         {
             // Variables for the validation
