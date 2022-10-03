@@ -1,0 +1,33 @@
+﻿<Window x:Class="ICE01_TikTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ICE01_TikTacToe"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <!-- 2* means take up 5 pixels and then the * means take up whatever else is needed to take up -->
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="txtGrid00" Text="" Width="257"  Grid.Row="0" Grid.Column="0" MouseDoubleClick="UserSelection1" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="txtGrid01" Text="" Width="257"  Grid.Row="0" Grid.Column="1" MouseDoubleClick="UserSelection2" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="txtGrid02" Text="" Width="257"  Grid.Row="0" Grid.Column="2" MouseDoubleClick="UserSelection3" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="txtGrid10" Text="" Width="257"  Grid.Row="1" Grid.Column="0" MouseDoubleClick="UserSelection4" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="txtGrid11" Text="" Width="257"  Grid.Row="1" Grid.Column="1" MouseDoubleClick="UserSelection5" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="txtGrid12" Text="" Width="257"  Grid.Row="1" Grid.Column="2" MouseDoubleClick="UserSelection6" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="txtGrid20" Text="" Width="257"  Grid.Row="2" Grid.Column="0" MouseDoubleClick="UserSelection7" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="txtGrid21" Text="" Width="257"  Grid.Row="2" Grid.Column="1" MouseDoubleClick="UserSelection8" TextAlignment="Center" FontSize="70"/>
+        <TextBox x:Name="txtGrid22" Text="" Width="257"  Grid.Row="2" Grid.Column="2" MouseDoubleClick="UserSelection9" TextAlignment="Center" FontSize="70"/>
+
+    </Grid>
+</Window>

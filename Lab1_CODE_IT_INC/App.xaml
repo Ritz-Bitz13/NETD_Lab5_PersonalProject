@@ -1,0 +1,9 @@
+﻿<Application x:Class="Lab1_CODE_IT_INC.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Lab1_CODE_IT_INC"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
