@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Error";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Book Information</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+
+<body>
+    <h1><img width="75" src="~/books.png" alt="no picture available" />Students4Cheap Textbooks<img width="75" src="~/books.png" alt="Alternate Text" /> </h1>
+
+    <ul>
+        <li><a class="active" href="~/Home/Index">Home</a></li>
+        <li><a href="~/Home/Register">Appraise a Book</a></li>
+        <li><a href="~/Home/ViewAppraisals">View Previous Appraisals</a></li>
+    </ul>
+    
+<h2>There was a problem entering in your book. Please try again.</h2>
+
+<h3> @ViewData["ErrorTitle"]</h3>
+<h3> @ViewData["ErrorISBN"]</h3>
+<h3> @ViewData["ErrorVersion"]</h3>
+<h3> @ViewData["ErrorPrice"]</h3>
+</body>
+
+
+</html>

@@ -1,0 +1,60 @@
+﻿<Window x:Class="WEBD_CarDatabase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WEBD_CarDatabase"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1080">
+    <Grid>
+        <!-- pretty standard two column definition. 
+        Note that the first column definition takes on a pre-defined width.
+        However, the second column takes on "*" or the remaining width.-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350" />
+            <ColumnDefinition Width="*" />
+
+
+
+        </Grid.ColumnDefinitions>
+        <Grid Background="#01FFFFFF" >
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Foreground="Black" Background="{x:Null}" BorderBrush="{x:Null}">
+                    </Button>
+                    <TextBlock Text="Car Dealership" FontSize="18" Margin="10" VerticalAlignment="Center"/>
+                </StackPanel>
+                <ListViewItem Padding="10">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Main Menu" VerticalAlignment="Center"/>
+
+
+                    </StackPanel>
+
+                </ListViewItem>
+
+                <ListView FontSize="12" SelectionChanged="SettingsListViewSelectionChanged">
+                    <ListViewItem Padding="10" x:Name="CarInventory">
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Add Car Inventory" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem Padding="10" x:Name="ViewCars">
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="View Car Inventory" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </ListViewItem>
+
+                </ListView>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Column="1" Background="White" x:Name="SettingsContentPanel">
+
+
+        </Grid>
+    </Grid>
+</Window>

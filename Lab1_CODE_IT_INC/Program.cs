@@ -1,6 +1,6 @@
 ﻿#region Comment Header
 /*
-    * Group Members: Martin Barber
+    * Name: Martin Barber
     * Student ID's:	100368442
     * Class: NETD 3202 - 04
     * Date: Started Sept 28th, Finished October 1st.

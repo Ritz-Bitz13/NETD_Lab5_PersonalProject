@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Book Information</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+
+<body>
+<h1><img width="75" src="~/books.png" alt="no picture available" />Students4Cheap Textbooks<img width="75" src="~/books.png" alt="Alternate Text" /> </h1>
+
+    <ul>
+        <li><a class="active" href="~/Home/Index">Home</a></li>
+        <li><a href="~/Home/Register">Appraise a Book</a></li>
+        <li><a href="~/Home/ViewAppraisals">View Previous Appraisals</a></li>
+    </ul>
+<h1>Please enter your book information below:</h1>
+    <div>
+        <form action="~/Home/Register" method="POST">
+
+            <!--
+            This will be all the text boxes and labels to get the inputs from the user
+            -->
+            <label for="title">Textbook Title:</label>
+            <input type="text" id="title" name="title" placeholder="Hunger Games">
+            <br /><br />
+            <label for="isbn">Textbook ISBN:</label>
+            <input type="text" id="isbn" name="isbn" placeholder="123456">
+            <br /><br />
+            <label for="version">Textbook Version</label>
+            <input type="text" id="version" name="version" placeholder="6">
+            <br /><br />
+            <label for="originalPrice">Original Purchase Price:</label>
+            <input type="text" id="originalPrice" name="originalPrice" placeholder="200">
+            <br /><br />
+            <label for="condition">Select Condition of the Book:</label>
+            <!--
+            This will be the select box to display different items for quality of the book.
+            -->
+            <select name="condition" id="condition">
+                <option value="Like New">Like New</option>
+                <option value="Good">Good</option>
+                <option value="Bad">Bad</option>
+            </select>
+
+            <!--
+            This is the submit button
+            -->
+            <br/>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+
+</html>

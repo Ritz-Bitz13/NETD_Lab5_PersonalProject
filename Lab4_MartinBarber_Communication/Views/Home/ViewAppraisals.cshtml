@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Lab4_MartinBarber.Models.Textbook>
+@{
+    ViewData["Title"] = "ViewAppraisals";
+}
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Previous Appraisals</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+</head>
+
+<body>
+<h1><img width="75" src="~/books.png" alt="no picture available" />Students4Cheap Textbooks<img width="75" src="~/books.png" alt="Alternate Text" /> </h1>
+
+<ul>
+    <li><a class="active" href="~/Home/Index">Home</a></li>
+    <li><a href="~/Home/Register">Appraise a Book</a></li>
+    <li><a href="~/Home/ViewAppraisals">View Previous Appraisals</a></li>
+</ul>
+    
+<h2 align="center">The Titles below are your previous Appraisals</h2>
+
+<table width="80%" border="1px" align="center">
+    <tr>
+        <th width="25%">
+            
+            Book Name
+        </th>
+        <th width="10%">
+            ISBN Number
+        </th>
+        <th width="10%">
+            Version Number
+        </th>
+        <th width="10%">
+            Original Price
+        </th>
+        <th width="10%">
+            Condition
+        </th>
+        <th width="10%">
+            Appraisal Price
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr align="center">
+            <td>
+                @Html.DisplayFor(ModelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(ModelItem => item.isbn)
+            </td>
+            <td>
+                @Html.DisplayFor(ModelItem => item.version)
+            </td>
+            <td>
+                @Html.DisplayFor(ModelItem => item.originalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(ModelItem => item.condition)
+            </td>
+            <td>
+                @Html.DisplayFor(ModelItem => item.appraisal)
+            </td>
+
+        </tr>
+    }
+
+</table>
+</body>
+
+
+</html>

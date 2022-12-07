@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title>Something Fancy to Regsiter For</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+    <h1>Register </h1>
+
+    <ul>
+        <li><a href="~/Home/Index">Home</a></li>
+        <li><a class="active" href="~/Home/Register">Register</a></li>
+
+
+    </ul>
+
+    <div>
+        <form action="~/Home/Register" method="POST">
+
+
+            <label for="make">Make</label>
+            <input type="text" id="make" name="make" placeholder="Your Make ....">
+            <br />
+            <label for="modelName">Model</label>
+            <input type="text" id="modelName" name="modelName" placeholder="Your Model ....">
+            <br />
+            <label for="year">Year</label>
+            <input type="text" id="year" name="year" placeholder="Year ....">
+            <br />
+            <label for="kilometers">Kilometers</label>
+            <input type="text" id="kilometers" name="kilometers" placeholder="Kilometers ....">
+            <br />
+
+
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+
+</html>

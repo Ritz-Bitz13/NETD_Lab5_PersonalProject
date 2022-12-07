@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Registered";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+    <title>Book Appraised!</title>
+    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
+
+</head>
+
+
+<body>
+
+<h1><img width="75" src="~/books.png" alt="Alternate Text" />Students4Cheap Textbooks <img width="75" src="~/books.png" alt="Alternate Text" /> </h1>
+
+<ul>
+    <li><a class="active" href="~/Home/Index">Home</a></li>
+    <li><a href="~/Home/Register">Appraise a Book</a></li>
+    <li><a href="~/Home/ViewAppraisals">View Previous Appraisals</a></li>
+</ul>
+    <h1>Book Appraised Value!</h1>
+
+
+<h3> @ViewData["BookName"]</h3>
+<h3> @ViewData["ISBN"]</h3>
+<h3> @ViewData["Version"]</h3>
+<h3> @ViewData["OriginalPrice"]</h3>
+<h3> @ViewData["Condition"]</h3>
+
+<h3> @ViewData["Appraise"]</h3>
+<h3> @ViewData["list"]</h3>
+
+</body>
+
+
+</html>
